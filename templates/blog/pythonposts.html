@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} PythonProjectsposts {% endblock title %}
+
+{% block cssurl %}<link rel="stylesheet" href="{% static 'blog/posts.css'%}">{% endblock cssurl %}
+
+{% block other %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Tutorials</a></li>
+        <li><a href="/">Contact</a></li>
+{% endblock other %}
+{% block body %}
+    <div class="body">
+    <div class="container">
+        <div class="heading"> 
+            <h1>{{post.Name}}</h1>
+        </div>
+        <div class="content">
+            <p>{{post.desc | linebreaksbr | safe }}</p>
+            <div id="codeheading">
+                Code:
+            </div>
+            <div class="code">
+                <div class="top">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div id="content">
+                <p id="codecontent">
+                   {{post.code | linebreaksbr}}
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

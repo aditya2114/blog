@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1{
+    color: white;
+    margin: 30px 0px;
+    font-size: 3rem;
+    font-family: 'Montserrat', serif;
+    text-align: center;
+}
+.posts{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+    background-color: rgb(231, 200, 168);
+}
+
+.postheading{
+    color: black;
+    font-size: 2.3rem;
+    font-family: 'Amaranth';
+    margin: 7px 2px;
+}
+.desc{
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    margin: 5px 2px;
+}
+.code{
+    font-size: 1rem;
+    font-family: 'Roboto';
+    margin: 10px 2px;
+}
+.btn{
+   margin: 7px;
+   padding: 5px;
+   font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(177, 174, 174)
+}
+
+@media only screen and (max-width:860px){
+    .container h1{
+        font-size: 2rem;
+    }   
+    .h-nav{
+        height: 70px;
+    }
+}
+@media only screen and (max-width:700px){
+    .postheading{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:450px){
+    .posts{
+        width: 75%;
+    }
+}

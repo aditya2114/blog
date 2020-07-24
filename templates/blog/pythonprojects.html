@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}python projects{% endblock title %}
+
+{% block other %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Tutorials</a></li>
+        <li><a href="/">Contact</a></li>
+{% endblock other %}
+{% block body %}
+        <div class="container">
+                <h1>Python Projects by Coders Arena</h1>
+                {% for post in posts %}
+                <div class="posts">
+                        <p class="postheading">{{ post.Name }}</p>
+                        <p class="desc">{{ post.desc | truncatechars_html:300 }}</p>
+                        <a href="{{post.slug}}"><button class="btn">Explore</button></a>
+                </div>
+                {% endfor %}
+        </div>
+{% endblock body %}

@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} Free projects of python,machine learning, web development  {% endblock title %}
+
+{% block home %}
+    <li><a href="#info-section">Home</a></li>
+    <li><a href="#services">Tutorials</a></li>
+    <li><a href="#contact">Contact</a></li>
+{% endblock home %}
+
+{% block body %}
+    <section id="info-section">
+        <p id="info">
+            Confused where to start coding don't worry about it you are at right place. Coders arena will 
+            give you perfect knowledge about web development using python an machine learning to give kickstart 
+            to your career.
+            <br>
+        </p>
+    </section>
+
+
+    <section id="services">
+        <div id="services-1" class="responsive"> 
+            <img src="{% static 'images/unnamed.png' %}" alt="" id="img1">
+            <h1>Python Projects</h1>
+            <p>
+                Get access to free python projects with source code.
+            </p>
+            <a href="blog/pythonprojects"><button class="btn">Get Access</button></a>
+        </div>
+        <div id="services-2" class="responsive">
+            <img src="{% static 'images/Hey_Machine_Learning_Logo.png' %}" alt="" id="img2">
+            <h1>Machine Learning</h1>
+            <p>
+                Get access to free machine learning projects.
+            </p>
+            <a href="blog/mlprojects"><button class="btn">Get Access</button></a>
+        </div>
+        <div id="services-3" class="responsive">
+            <div id="images">
+            <img src="{% static 'images/512px-HTML5_logo_and_wordmark.svg.png' %}" alt="" class="img3" id="img3-1">
+            <img src="{% static 'images/1200px-CSS.3.svg.png' %}" alt="" class="img3" id="img3-2">
+            <img src="{% static 'images/javascript-logo-8892AEFCAC-seeklogo.com.png' %}" alt="" id="img3-3" class="img3">
+        </div>
+            <h1>Web Development</h1>
+            <p>
+                Web development with new tools, tips and tricks.
+            </p>
+            <a href="blog/webdevprojects"><button class="btn">Get Access</button></a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form action=" " id="form" method="post">
+            {% csrf_token %}
+            <div id="textbox">
+                <input type="text" class = "contact" name="name" placeholder="Name">
+                <input type="Email" class = "contact" name="email" placeholder="Email">
+            </div>
+            <div class="textbox">
+                <textarea class="contact" name="message" placeholder="Message"></textarea>
+            </div>
+            <div>
+                <button class="btn"  id="contact-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+{% endblock body %}

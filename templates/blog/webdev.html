@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} Web Devvelopment Projects {% endblock title %}
+
+{% block other %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Tutorials</a></li>
+        <li><a href="/">Contact</a></li>
+{% endblock other %}
+
+{% block body %}
+    <div class="container">
+                <h1>Coming Soon</h1>
+                {% for post in posts %}
+                <div class="posts">
+                        <p class="postheading">{{ post.Name }}</p>
+                        <p class="desc">{{ post.desc }}</p>
+                        <p class="code">{{ post.code }}</p>
+                        <a href="{{post.slug}}"><button class="btn">Explore</button></a>
+                </div>
+                {% endfor %}
+        </div>
+{% endblock body %}
